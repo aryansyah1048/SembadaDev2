@@ -1,0 +1,1688 @@
+.translate {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  z-index: 10;
+  background: darkblue;
+}
+
+.translate:hover {
+  background: darkblue;
+}
+
+.translate:active {
+  background: navy;
+}
+
+@media screen and (max-width: 768px) {
+  .translate {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 10;
+    background: darkblue;
+  }
+
+  .item h2 {
+    padding-top: 50px;
+  }
+
+  .content p {
+    display: none;
+  }
+
+  .translate:hover {
+    background: darkblue;
+  }
+
+  .translate:active {
+    background: navy;
+  }
+}
+
+.menu-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+.menu-popup ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-popup ul li {
+  padding: 10px 20px;
+}
+.menu-popup ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.fab-menu {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+  padding: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .fab-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .fab-menu:hover {
+    transform: scale(1.1);
+    background: #34a853;
+  }
+}
+/* Navbar keluar dari tombol */
+@media (max-width: 700px) {
+  .nav-links {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+
+    /* Perbaikan utama */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none; /* Biar gak bisa diklik sebelum muncul */
+  }
+
+  /* Navbar muncul saat tombol FAB diklik */
+
+  .nav-links a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    padding: 10px; /* Tambah ruang tiap menu */
+    width: 100%; /* Biar rata dalam kotak */
+    text-align: center;
+  }
+
+  .show-navbar {
+    transform: translateY(0);
+  }
+}
+
+/* end responsif nav */
+
+/* hover navbar */
+/* Navbar Style */
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+/* Garis bawah animasi */
+.scroll-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: black;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.scroll-link:hover {
+  color: black;
+}
+
+.scroll-link:hover::after {
+  width: 100%;
+}
+
+/* hover end navbar */
+
+/* loading screen  respon*/
+@media (max-width: 900px) {
+  .loading-screen {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+  }
+
+  .tugu {
+    width: 150px !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    animation: none !important;
+    margin-bottom: 20px !important;
+  }
+
+  .text {
+    font-size: 2em !important;
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    animation: none !important;
+    text-shadow: 0 0 10px gold !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tugu {
+    width: 150px;
+    position: static;
+    animation: fadeInScale 1.5s ease-out forwards;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    font-size: 2.5em;
+    position: static;
+    animation: fadeInScale 1.5s ease-out forwards;
+  }
+}
+
+/* Animasi Fade In + Scale */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* loading screen */
+.loading-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 1s forwards 3s;
+}
+.tugu {
+  width: 220px;
+  position: absolute;
+  left: -250px;
+  animation: slideInLeft 1.5s forwards, slideOutLeft 1.5s forwards 2.5s;
+  filter: drop-shadow(0 0 15px gold);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.text {
+  font-size: 3.5em;
+  font-weight: bold;
+  position: absolute;
+  right: -400px;
+  animation: slideInRight 1.5s forwards, slideOutRight 1.5s forwards 2.5s;
+  color: white;
+  text-shadow: 0 0 15px gold;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@keyframes slideInLeft {
+  to {
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slideOutLeft {
+  to {
+    left: -250px;
+    opacity: 0;
+  }
+}
+@keyframes slideInRight {
+  to {
+    right: 40%;
+    transform: translate(50%, -50%);
+  }
+}
+@keyframes slideOutRight {
+  to {
+    right: -400px;
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes blurEffect {
+  from {
+    filter: blur(10px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+}
+nav.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+nav img {
+  width: 80px;
+  height: 80px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+#navbar.container {
+  top: 0;
+}
+
+.navbar-scroll {
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scrolled {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* slider */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: Poppins;
+  margin: 0;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+section {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 auto;
+  overflow: hidden;
+}
+svg {
+  width: 25px;
+}
+header {
+  width: 1200px;
+  max-width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+header .logo {
+  font-weight: bold;
+}
+header .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 500;
+}
+/* css slider */
+.slider {
+  height: 100vh;
+  margin-top: -50px;
+  position: relative;
+}
+
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .list .item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.slider .list .item .content {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+}
+.slider .list .item .content p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #000000;
+}
+.slider .list .item .content h2 {
+  font-size: 100px;
+  margin: 0;
+  color: black;
+}
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0)
+  );
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2 {
+  animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3) {
+  animation-duration: 1.3s;
+}
+.arrows {
+  position: absolute;
+  top: 30%;
+  right: 50px;
+  z-index: 100;
+}
+.arrows button {
+  background-color: #eee5;
+  border: none;
+  font-family: monospace;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: x-large;
+  color: #eee;
+  transition: 0.5s;
+}
+.arrows button:hover {
+  background-color: #eee;
+  color: black;
+}
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+  justify-content: center;
+}
+.thumbnail::-webkit-scrollbar {
+  width: 0;
+}
+.thumbnail .item {
+  width: 150px;
+  height: 220px;
+  filter: brightness(0.5);
+  transition: 0.5s;
+  flex-shrink: 0;
+}
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.thumbnail .item.active {
+  filter: brightness(1);
+}
+.thumbnail .item .content {
+  font-size: 1px;
+  position: absolute;
+  inset: auto 10px 10px 10px;
+}
+
+/*  */
+@media screen and (max-width: 678px) {
+  .thumbnail {
+    justify-content: start;
+  }
+  .slider .list .item .content h2 {
+    font-size: 60px;
+  }
+  .arrows {
+    top: 10%;
+  }
+}
+/*  */
+
+/* home respon */
+@media screen and (max-width: 700px) {
+  /* Navbar */
+  .hamburger {
+    right: 15px;
+    top: 10px;
+  }
+
+  .nav-links {
+    width: 55%;
+  }
+
+  /* Slider */
+  .slider {
+    height: 60vh;
+  }
+
+  .slider .list .item .content h2 {
+    font-size: 30px;
+  }
+
+  .slider .list .item .content p {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  /* Thumbnail */
+  .thumbnail {
+    height: 120px;
+    padding: 0 20px;
+  }
+
+  .thumbnail .item {
+    width: 80px;
+    height: 100px;
+  }
+
+  .thumbnail .item .content {
+    font-size: 10px;
+  }
+
+  /* Arrows */
+  .arrows {
+    display: none;
+  }
+
+  .arrows button {
+    width: 30px;
+    height: 30px;
+    font-size: large;
+  }
+}
+
+/* end home respon */
+
+/* Header */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: Poppins;
+  margin: 0;
+  background-color: #010101;
+}
+svg {
+  width: 25px;
+}
+
+#about {
+  padding: 100px 50px;
+  text-align: center;
+}
+.ringkasan,
+.konten-isi p,
+.tombol {
+  margin: 0;
+}
+
+#aboutus,
+#Budaya,
+#ourteam,
+#comentar {
+  text-align: center;
+}
+
+section p.ringkasan {
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+}
+section .konten-isi p {
+  font-style: normal;
+}
+section {
+  padding: 50px 0px 50px 0px;
+}
+section h3 {
+  font-size: 30px;
+}
+section h3::after {
+  content: "";
+  border-bottom: 5px solid #a9a9a9;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* tombol slengkappnya di home */
+.anjay {
+  position: relative;
+  padding: 12px 35px;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+#Budaya,
+#about,
+#wisata,
+#ourteam,
+#comentar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.layar-dalam {
+  max-width: 800px;
+  text-align: center;
+}
+
+.container-budaya {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.container-batik,
+.container-wayang {
+  width: 48%;
+  background-color: #a9a9a9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+  color: black;
+}
+.container-batik:hover,
+.container-wayang:hover {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
+.btn-detail {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #ffffff;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.batik,
+.wayang {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.kiri {
+  float: left;
+  margin-right: 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+  width: 200px;
+}
+
+.kanan {
+  width: 200px;
+  float: left;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+/* Wisata */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.relative {
+  width: 100%;
+  height: 300px;
+}
+
+.relative img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* efek hover */
+
+/* Layout container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: #222;
+  border-radius: 15px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+/* Wrapper for image */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: perspective(1000px) translateY(-15px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  animation: smoothBorder 3s infinite linear,
+    floating 1s ease-in-out infinite alternate;
+}
+
+/* Smooth Border Animation */
+@keyframes smoothBorder {
+  0% {
+    border: 3px solid rgb(238, 255, 7);
+  }
+  25% {
+    border: 3px solid rgb(255, 102, 204);
+  }
+  50% {
+    border: 3px solid rgb(0, 204, 255);
+  }
+  75% {
+    border: 3px solid rgb(102, 255, 153);
+  }
+  100% {
+    border: 3px solid rgb(255, 255, 0);
+  }
+}
+
+/* Floating animation */
+@keyframes floating {
+  from {
+    transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
+  }
+  to {
+    transform: translateY(-5px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+/* Title Styling */
+.title {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease, background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* effect card  */
+.card:hover .title {
+  bottom: 20px;
+  opacity: 1;
+  background: white;
+  color: black;
+}
+
+/* Style dasar untuk kartu */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Efek hover untuk membuat kartu mengambang dengan cahaya */
+.card:hover {
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(0, 255, 255, 0.4);
+}
+
+/* Efek glow tambahan */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.3),
+    rgba(255, 0, 255, 0.3)
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Style untuk judul di dalam kartu */
+.card .title {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.5s, background 0.5s;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Efek hover untuk teks agar berubah warna */
+.card:hover .title {
+  background: white;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.5s, box-shadow 0.5s;
+  cursor: pointer;
+}
+
+/* Wrapper for image */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(0, 255, 255, 0.4);
+}
+
+/* Efek glow tambahan */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.3),
+    rgba(255, 0, 255, 0.3)
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Style untuk button */
+.card button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease, background 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect - Button muncul */
+.card:hover button {
+  bottom: 30px;
+  opacity: 1;
+  background: white;
+  color: black;
+}
+/* our team */
+/* Our Team Section */
+.team-section {
+  padding: 2rem 1rem;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  color: #4a5568;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.team-members {
+  display: grid;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .team-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* respon for budaya */
+@media (max-width: 1070px) {
+  .batik,
+  .wayang {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .kiri {
+    float: left;
+    margin-right: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 100px;
+  }
+
+  .kanan {
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+}
+
+/* Kalau lebih kecil, jadi 1 kolom */
+@media (max-width: 768px) {
+  .batik,
+  .wayang {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .kiri {
+    float: left;
+    margin-right: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 50px;
+  }
+
+  .kanan {
+    width: 50px;
+    float: left;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container-budaya {
+    flex-direction: column; /* Jadi 1 kolom */
+    align-items: center;
+  }
+
+  .container-batik,
+  .container-wayang {
+    width: 90%; /* Lebih lebar di layar kecil */
+  }
+}
+
+/* wisata early */
+/* Media Query untuk layar di bawah 500px */
+@media (max-width: 980px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none; /* Menghilangkan scrollbar */
+  }
+
+  .card {
+    width: 100%; /* Menyesuaikan ukuran kotak */
+    height: 200px; /* Ukuran lebih kecil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar memenuhi kotak */
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+/* wisata end */
+.member-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-profile {
+  padding: 2rem;
+  text-align: center;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid #e2e8f0;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin: 0.5rem 0;
+}
+
+.member-role {
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.member-bio {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+.cta-button {
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 0.8rem 1.5rem;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #c53030;
+}
+
+/* Modal Styles */
+.member-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-close {
+  background: #718096;
+}
+
+.modal-close:hover {
+  background: #4a5568;
+}
+
+/* judul testimoni */
+.judul-testimoni {
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+}
+
+.comentar {
+  display: flex; /* flex */
+  justify-content: center; /* justify-center */
+  align-items: center; /* items-center */
+  min-height: 100vh; /* min-h-screen */
+}
+
+.grid-container {
+  display: grid; /* grid */
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 1.5rem; /* gap-6 */
+}
+
+@media (min-width: 640px) {
+  /* sm breakpoint */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+  }
+}
+
+/* untuk hover coment */
+.testimonial-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform;
+  background-color: #ffffff; /* bg-white */
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.flex-container {
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.icon-container {
+  background-color: #9ca3af; /* bg-gray-400 */
+  color: #ffffff; /* text-white */
+  border-radius: 50%; /* rounded-full */
+  height: 2.5rem; /* h-10 */
+  width: 2.5rem; /* w-10 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fahrul {
+  margin-left: 1rem;
+}
+
+.heading {
+  color: #000000;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.heading:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+.flex-inline {
+  display: flex;
+  align-items: center;
+}
+
+.font {
+  display: flex;
+  align-items: center;
+  color: #f59e0b;
+}
+
+.check-icon {
+  color: #3b82f6;
+  margin-left: 0.5rem;
+}
+
+.text-gray {
+  color: #000000;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.text-gray:hover {
+  color: #e5e7eb;
+}
+
+.flex-wildan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05) !important;
+  background: linear-gradient(
+    135deg,
+    #4285f4,
+    #34a853
+  ); /* Gradasi Biru - Hijau */
+}
+
+.footer {
+  background-color: grey;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-container img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.fahrul {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.heading a:hover {
+  color: #fff;
+}
+
+.flex-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.font {
+  display: flex;
+  gap: 2px;
+}
+
+.font i {
+  color: gold;
+}
+
+.font::before {
+  content: "⭐ ⭐ ⭐ ⭐ ⭐";
+  font-size: 12px;
+}
+
+.check-icon {
+  color: #4caf50;
+  font-size: 16px;
+}
+
+.text-gray {
+  color: #555;
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 1.6;
+}

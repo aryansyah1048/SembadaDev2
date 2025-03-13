@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YogyaPedia</title>
+
+    <link rel="icon" href="image/logojogja.png" type="image/x-icon" />
+
+    <!-- ajax -->
+    <!-- AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- Awesome -->
+
+    <!-- My Style -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen">
+      <img src="image/logojogja.png" alt="Tugu Jogja" class="tugu" />
+      <div class="text">SembadaDev</div>
+    </div>
+    <div
+      id="mainContent"
+      style="opacity: 0; transition: opacity 1s, filter 1s; filter: blur(10px)"
+    >
+      <!-- Isi website kamu -->
+    </div>
+
+    <div class="menu-popup" id="menuPopup">
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#Budaya">Budaya</a></li>
+        <li><a href="#wisata">Wisata</a></li>
+        <li><a href="#ourteam">Tim</a></li>
+        <li><a href="#comentar">Testimoni</a></li>
+      </ul>
+    </div>
+
+    <nav id="navbar">
+      <a href="#">
+        <img src="image/logojogja.png" alt="Logo" />
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="#home" class="scroll-link" data-en="Home" data-id="Beranda"
+            >Beranda</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="scroll-link" data-en="About" data-id="Tentang"
+            >Tentang</a
+          >
+        </li>
+        <li>
+          <a
+            href="#Budaya"
+            class="scroll-link"
+            data-en="Culture"
+            data-id="Budaya"
+            >Budaya</a
+          >
+        </li>
+        <li>
+          <a
+            href="#wisata"
+            class="scroll-link"
+            data-en="Tourism"
+            data-id="Wisata"
+            >Wisata</a
+          >
+        </li>
+        <li>
+          <a href="#ourteam" class="scroll-link" data-en="Team" data-id="Tim"
+            >Tim</a
+          >
+        </li>
+        <li>
+          <a
+            href="#comentar"
+            class="scroll-link"
+            data-en="Testimonial"
+            data-id="Testimoni"
+            >Testimoni</a
+          >
+        </li>
+      </ul>
+      <div class="translate">ID</div>
+      <div class="fab-menu" onclick="toggleMenu()">
+        <span>☰</span>
+      </div>
+    </nav>
+
+    <!-- Slider -->
+    <section id="home">
+      <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+          <div class="item active">
+            <img src="image/slide2tuguh.jpg" />
+            <div class="content">
+              <p data-en="Yogyakarta's Icons" data-id="Icon Yogyakarta">
+                Icon Yogyakarta
+              </p>
+              <h2 data-en="Monument" data-id="Tugu">Tugu</h2>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/slide1benteng.jpg" />
+            <div class="content">
+              <p data-en="History" data-id="Sejarah">Sejarah</p>
+              <h2>Vredeburg</h2>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/slide3malioboro.jpg" />
+            <div class="content">
+              <p data-en="Shopping Center" data-id="Pusat Belanja">
+                Pusat Belanja
+              </p>
+              <h2>Malioboro</h2>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/slide4candi.jpg" />
+            <div class="content">
+              <p data-en="Culture" data-id="Budaya">Budaya</p>
+              <h2>Prambanan</h2>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/slide5merapi.jpg" />
+            <div class="content">
+              <p data-en="Nature" data-id="Alam">Alam</p>
+              <h2>Merapi</h2>
+            </div>
+          </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+          <div class="item active" data-aos="flip-left">
+            <img src="image/slide2tuguh.jpg" />
+            <div class="content" data-en="Monument" data-id="Tugu">Tugu</div>
+          </div>
+          <div class="item" data-aos="flip-left">
+            <img src="image/slide1benteng.jpg" />
+            <div class="content">Vredeburg</div>
+          </div>
+          <div class="item" data-aos="flip-left">
+            <img src="image/slide3malioboro.jpg" />
+            <div class="content">Malioboro</div>
+          </div>
+          <div class="item" data-aos="flip-left">
+            <img src="image/slide4candi.jpg" />
+            <div class="content" data-en="Temple" data-id="Candi">Candi</div>
+          </div>
+          <div class="item" data-aos="flip-left">
+            <img src="image/slide5merapi.jpg" />
+            <div
+              class="content"
+              data-en="Merapi Mountain"
+              data-id="Gunung Merapi"
+            >
+              Gunung Merapi
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section id="about">
+      <h3 data-en="About" data-id="Tentang">Tentang</h3>
+      <p
+        class="ringkasan"
+        data-en="Jogja is more than just a city—it's full of stories, longing, and adventure! Are you ready to explore Jogja?"
+        data-id="Jogja itu lebih dari sekadar kota—penuh cerita, rindu, dan petualangan! Udah siap eksplor Jogja?"
+      >
+        Jogja itu lebih dari sekadar kota—penuh cerita, rindu, dan petualangan!
+        Udah siap eksplor Jogja?
+      </p>
+      <div class="konten-isi">
+        <p>
+          Jogja itu bukan sekadar kota, tapi juga cerita. Suasana klasik
+          bercampur modern bikin siapa pun betah berlama-lama. Dari Malioboro
+          yang selalu hidup, angkringan dengan kopi jos khasnya, sampai Candi
+          Prambanan yang megah, semua punya pesona sendiri. Jalan-jalan naik
+          delman, nyicip gudeg legit, atau sekadar duduk di Tugu Jogja sambil
+          nunggu senja—semuanya terasa istimewa. Apalagi kalau mampir ke Pantai
+          Parangtritis buat lihat sunset atau ke Merapi buat petualangan seru.
+          Di Jogja, setiap sudut punya kenangan, setiap langkah berasa pulang.
+          Nggak heran kalau banyak yang bilang, Jogja itu terbuat dari rindu,
+          pulang, dan angkringan.
+        </p>
+      </div>
+      <div class="tombol-container">
+        <a href="selengkapnya.html" class="tombol">
+          <button class="anjay" data-id="selengkapnya" data-en="Learn More">
+            selengkapnya
+            <div class="star-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="star-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                version="1.1"
+                style="
+                  shape-rendering: geometricPrecision;
+                  text-rendering: geometricPrecision;
+                  image-rendering: optimizeQuality;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                "
+                viewBox="0 0 784.11 815.53"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    class="fil0"
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Budaya -->
+    <section id="Budaya">
+      <div class="layar-dalam">
+        <h3 data-en="Yogyakarta culture" data-id="Budaya Yogyakarta">
+          Budaya Yogyakarta
+        </h3>
+        <p
+          class="ringkasan"
+          data-en="Sekaten and Labuhan Merapi are two distinctive traditions of Yogyakarta, full of meaning. Sekaten is celebrated every Maulid Nabi with gamelan, night markets, and Grebeg Maulud processions. Meanwhile, Labuhan Merapi is a ritual offering on the slopes of Merapi as an expression of gratitude and prayer for safety, reflecting the harmony of Jogja's cultural and spiritual life."
+          data-id="Sekaten dan Labuhan Merapi adalah dua tradisi khas Yogyakarta yang sarat makna. Sekaten dirayakan setiap Maulid Nabi dengan gamelan, pasar malam, dan prosesi Grebeg Maulud. Sementara itu, Labuhan Merapi adalah ritual persembahan di lereng Merapi sebagai ungkapan syukur dan doa keselamatan, mencerminkan harmoni budaya dan spiritual masyarakat Jogja."
+        >
+          Sekaten dan Labuhan Merapi adalah dua tradisi khas Yogyakarta yang
+          sarat makna. Sekaten dirayakan setiap Maulid Nabi dengan gamelan,
+          pasar malam, dan prosesi Grebeg Maulud. Sementara itu, Labuhan Merapi
+          adalah ritual persembahan di lereng Merapi sebagai ungkapan syukur dan
+          doa keselamatan, mencerminkan harmoni budaya dan spiritual masyarakat
+          Jogja.
+        </p>
+      </div>
+
+      <div class="container-budaya">
+        <div class="container-wayang" data-aos="fade-right">
+          <img src="image/sekaten.webp" class="kiri" alt="wayang" />
+          <div>
+            <h2><b>Sekaten</b></h2>
+            <p
+              class="paragraf"
+              data-en="Sekaten is an annual tradition held to commemorate the birth of Prophet Muhammad SAW. This event takes place for a week at Alun-Alun Utara Keraton Yogyakarta and ends with Grebeg Maulud, where gunungan filled with agricultural produce is distributed to the public as a symbol of blessings."
+              data-id="Sekaten adalah tradisi tahunan yang diselenggarakan untuk memperingati Maulid Nabi Muhammad SAW. Acara ini berlangsung selama seminggu di Alun-Alun Utara Keraton Yogyakarta dan diakhiri dengan Grebeg Maulud, di mana gunungan berisi hasil bumi dibagikan kepada masyarakat sebagai simbol keberkahan."
+            >
+              Sekaten adalah tradisi tahunan yang diselenggarakan untuk
+              memperingati Maulid Nabi Muhammad SAW. Acara ini berlangsung
+              selama seminggu di Alun-Alun Utara Keraton Yogyakarta dan diakhiri
+              dengan Grebeg Maulud, di mana gunungan berisi hasil bumi dibagikan
+              kepada masyarakat sebagai simbol keberkahan.
+            </p>
+            <a href="batik.html"><button class="btn-detail">Monggo</button></a>
+          </div>
+        </div>
+
+        <div class="container-batik" data-aos="fade-left">
+          <img src="image/labuanmerapi.webp" class="kanan" alt="batik" />
+          <div>
+            <h2><b>Labuhan Merapi & Labuhan Parangkusumo</b></h2>
+            <p
+              class="paragraf"
+              data-en="This tradition is carried out by the Yogyakarta Palace as a form of respect for the spiritual rulers of Mount Merapi and the Southern Coast. This ritual involves offering sesaji which is floated into the sea or placed on the slopes of Merapi as a prayer for the safety of Jogja residents."
+              data-id="Tradisi ini dilakukan oleh Keraton Yogyakarta sebagai bentuk penghormatan kepada penguasa gaib Gunung Merapi dan Pantai Selatan. Ritual ini melibatkan persembahan sesaji yang dihanyutkan ke laut atau diletakkan di lereng Merapi, sebagai doa keselamatan bagi masyarakat Jogja."
+            >
+              Tradisi ini dilakukan oleh Keraton Yogyakarta sebagai bentuk
+              penghormatan kepada penguasa gaib Gunung Merapi dan Pantai
+              Selatan. Ritual ini melibatkan persembahan sesaji yang dihanyutkan
+              ke laut atau diletakkan di lereng Merapi, sebagai doa keselamatan
+              bagi masyarakat Jogja.
+            </p>
+            <a href="wayang.html"><button class="btn-detail">Monggo</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- wisata -->
+    <section id="wisata">
+      <div class="layar-dalam">
+        <h3 data-en="Tourism & Destinations" data-id="Wisata & Destinasi">
+          Wisata & Destinasi
+        </h3>
+        <p
+          class="ringkasan"
+          data-en="Yogyakarta is known as a city with a million charms, ranging from natural tourism, cultural heritage, to culinary delights. Several popular tourist destinations in Yogyakarta can be a choice for an unforgettable experience."
+          data-id="Yogyakarta dikenal sebagai kota dengan sejuta pesona, mulai dari
+        wisata alam, budaya, hingga kuliner. Beberapa tempat wisata populer di
+        Yogyakarta bisa menjadi pilihan untuk pengalaman tak terlupakan."
+        >
+          Yogyakarta dikenal sebagai kota dengan sejuta pesona, mulai dari
+          wisata alam, budaya, hingga kuliner. Beberapa tempat wisata populer di
+          Yogyakarta bisa menjadi pilihan untuk pengalaman tak terlupakan.
+        </p>
+      </div>
+      <div class="grid">
+        <div
+          class="card"
+          data-link="https://borobudur.injourneydestination.id/"
+          data-aos="fade-up-left"
+        >
+          <div class="wrapper">
+            <img src="image/wisata budaya.jpeg" alt="Tour" />
+          </div>
+          <button>visit</button>
+        </div>
+
+        <div class="card" data-link="https://tngmerapi.id/" data-aos="fade-up">
+          <div class="wrapper">
+            <img src="image/wisatamerapi.jpeg" alt="Tiket Pesawat" />
+          </div>
+          <button>visit</button>
+        </div>
+
+        <div
+          class="card"
+          data-link="https://www.malmalioboro.co.id/"
+          data-aos="fade-up"
+        >
+          <div class="wrapper">
+            <img src="image/wisata belanja.jpeg" alt="Paket Wisata" />
+          </div>
+          <button>visit</button>
+        </div>
+
+        <div
+          class="card"
+          data-link="https://raminten.com/"
+          data-aos="fade-up-right"
+        >
+          <div class="wrapper">
+            <img src="image/wisata kuliner.jpeg" alt="Cruise" />
+          </div>
+          <button>visit</button>
+        </div>
+      </div>
+    </section>
+    <!-- Our Team -->
+    <section id="ourteam" class="team-section">
+      <div class="section-container">
+        <h3 data-en="Team" data-id="Tim">Tim</h3>
+        <p
+          class="ringkasan"
+          data-en="This website was created by our team with full passion and creativity. Every design, feature, and interaction you see is the result of collaboration and hard work to provide a comfortable and engaging experience just for you."
+          data-id=" Website ini dibuat oleh tim kami dengan penuh semangat dan kreativitas. Setiap desain, fitur, dan interaksi yang kamu lihat adalah hasil dari kolaborasi dan kerja keras tim untuk memberikan pengalaman yang nyaman dan menarik buat kamu.  "
+        >
+          Website ini dibuat oleh tim kami dengan penuh semangat dan
+          kreativitas. Setiap desain, fitur, dan interaksi yang kamu lihat
+          adalah hasil dari kolaborasi dan kerja keras tim untuk memberikan
+          pengalaman yang nyaman dan menarik buat kamu.
+        </p>
+      </div>
+
+      <div class="team-members">
+        <!-- Member 1 -->
+        <article class="member-card" data-aos="fade-up-right">
+          <div class="member-profile">
+            <img
+              src="image/profiliyan.jpeg"
+              alt="Aryansyah Mahendra"
+              class="member-photo"
+            />
+            <h3 class="member-name">Aryansyah Mahendra</h3>
+            <p class="member-role">Web Penetration Testing</p>
+            <p
+              class="member-bio"
+              data-en="As an Interaction Developer, I designed this website with detail and dedication. Every interaction element came through a long process, combining aesthetics, functionality, and a compelling user experience."
+              data-id="Sebagai Interaction Developer, saya merancang website ini dengan detail dan dedikasi. Setiap elemen interaksi hadir melalui proses panjang, menggabungkan estetika, fungsionalitas, dan pengalaman pengguna yang memikat."
+            >
+              Hai, saya Aryansyah, web pentester yang mengamankan web budaya
+              Jogja dari berbagai ancaman. Saya menambahkan proteksi XSS,
+              membatasi akses dengan CORS, serta menerapkan rate limit untuk
+              mencegah spam dan serangan DDoS kecil agar web tetap aman.
+            </p>
+          </div>
+          <div class="member-social">
+            <a
+              href="https://github.com/aryansyah1048"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                src="image/github-color-svgrepo-com.svg"
+                alt="GitHub"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/gmail-svgrepo-com.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/aryansyahm._/"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                src="image/instagram-2016-logo-svgrepo-com.svg"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <button class="cta-button open-modal" data-modal="modal-1">
+            My Role
+          </button>
+        </article>
+
+        <!-- Modal 1 -->
+        <div id="modal-1" class="member-modal">
+          <div class="modal-content">
+            <h3 class="modal-title">Aryansyah Mahendra</h3>
+            <p
+              class="modal-text"
+              data-en="Hello! I'm Aryansyah,  
+            As an interaction developer, I design every detail of interaction with great care and dedication. This process is born from exploration, trial, and continuous refinement. Every animation, responsiveness, and interactive element is crafted with heart to deliver a smooth, intuitive, and meaningful experience. For me, interaction is not just about function, but about creating an emotional connection between users and technology."
+              data-id="Halo! Aku Aryansyah,  
+            Sebagai interaction developer, aku merancang setiap detail interaksi dengan penuh ketelitian dan dedikasi. Proses ini lahir dari eksplorasi, percobaan, dan penyempurnaan tanpa henti. Setiap animasi, responsivitas, dan elemen interaktif dikerjakan dengan sepenuh hati untuk menghadirkan pengalaman yang halus, intuitif, dan bermakna. Bagiku, interaksi bukan hanya soal fungsi, tapi bagaimana menghadirkan koneksi emosional antara pengguna dan teknologi."
+            >
+              Hai, saya Aryansyah, seorang web penetration tester yang
+              memastikan web budaya Jogja tetap kokoh seperti candi, tak
+              tergoyahkan oleh serangan digital. Saya menerapkan proteksi XSS
+              sebagai tameng dari serangan injeksi, CORS sebagai gerbang
+              selektif yang hanya mengizinkan akses sah, serta rate limit
+              sebagai perisai dari badai DDoS kecil yang bisa mengguncang
+              kestabilan situs. Bukan sekadar menjaga, saya ingin pengalaman
+              menjelajahi budaya Jogja di dunia digital tetap mulus, aman, dan
+              menarik. Seperti alunan gamelan yang harmonis, keamanan yang baik
+              akan membuat pengunjung betah, menikmati setiap kisah dan warisan
+              budaya tanpa gangguan.
+            </p>
+            <button class="cta-button close-modal">Close</button>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <article class="member-card" data-aos="fade-up">
+          <div class="member-profile">
+            <img
+              src="image/profilbobon_round_fixed.png"
+              alt="Santoso Wibowo"
+              class="member-photo"
+            />
+            <h3 class="member-name">Santoso Wibowo</h3>
+            <p class="member-role">UI/UX Designer</p>
+            <p
+              class="member-bio"
+              data-en="I designed this website with a dedicated UI/UX Design touch. I arrange every element, color and interaction carefully, so that the user experience feels comfortable, aesthetic and meaningful.✨"
+              data-id="Website ini aku rancang dengan sentuhan UI/UX Design yang penuh dedikasi. Setiap elemen, warna, dan interaksi aku susun hati-hati, biar pengalaman pengguna terasa nyaman, estetik, dan bermakna.✨"
+            >
+              Website ini aku rancang dengan sentuhan UI/UX Design yang penuh
+              dedikasi. Setiap elemen, warna, dan interaksi aku susun hati-hati,
+              biar pengalaman pengguna terasa nyaman, estetik, dan bermakna.✨
+            </p>
+          </div>
+          <div class="member-social">
+            <a
+              href="https://github.com/santoso2007"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                src="image/github-color-svgrepo-com.svg"
+                alt="GitHub"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/gmail-svgrepo-com.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/santosowibowo__/"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                src="image/instagram-2016-logo-svgrepo-com.svg"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <button class="cta-button open-modal" data-modal="modal-2">
+            My Role
+          </button>
+        </article>
+
+        <!-- Modal 2 -->
+        <div id="modal-2" class="member-modal">
+          <div class="modal-content">
+            <h3 class="modal-title">Santoso Wibowo</h3>
+            <p
+              class="modal-text"
+              data-en="Hello! I'm Santoso,
+            As a UI/UX Designer, I am responsible for creating designs that are not only visually appealing but also deliver an intuitive and meaningful user experience. By combining creativity, research, and technology, I strive to create digital solutions that make user interactions easier without compromising aesthetics."
+              data-id="Halo! Aku Santoso, Sebagai UI/UX Designer, saya bertanggung jawab menciptakan desain yang tidak hanya menarik secara visual, tetapi juga menghadirkan pengalaman pengguna yang intuitif dan bermakna. Dengan menggabungkan kreativitas, riset, dan teknologi, saya berusaha menciptakan solusi digital yang memudahkan pengguna berinteraksi tanpa mengorbankan estetika."
+            >
+              Halo! Aku Santoso, Sebagai UI/UX Designer, saya bertanggung jawab
+              menciptakan desain yang tidak hanya menarik secara visual, tetapi
+              juga menghadirkan pengalaman pengguna yang intuitif dan bermakna.
+              Dengan menggabungkan kreativitas, riset, dan teknologi, saya
+              berusaha menciptakan solusi digital yang memudahkan pengguna
+              berinteraksi tanpa mengorbankan estetika.
+            </p>
+            <button class="cta-button close-modal">Close</button>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <article class="member-card" data-aos="fade-up-left">
+          <div class="member-profile">
+            <img
+              src="image/profilrajuu.png"
+              alt="Afif Ezzra"
+              class="member-photo"
+            />
+            <h3 class="member-name">Afif Ezzra</h3>
+            <p class="member-role">Front-End Developer</p>
+            <p
+              class="member-bio"
+              data-en="This website was born from a long journey of Front-End Development. Every line of code I carefully composed, transforming the design into an interactive display that is responsive, modern, and functional. 🔥✨"
+              data-id="Website ini lahir dari perjalanan panjang Front-End Development. Setiap baris kode aku susun dengan teliti, mengubah desain jadi tampilan interaktif yang responsif, modern, dan fungsional. 🔥✨"
+            >
+              Website ini lahir dari perjalanan panjang Front-End Development.
+              Setiap baris kode aku susun dengan teliti, mengubah desain jadi
+              tampilan interaktif yang responsif, modern, dan fungsional. 🔥✨
+            </p>
+          </div>
+          <div class="member-social">
+            <a
+              href="https://github.com/afifezzra"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                src="image/github-color-svgrepo-com.svg"
+                alt="GitHub"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/gmail-svgrepo-com.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/afifezzra/"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                src="image/instagram-2016-logo-svgrepo-com.svg"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <button class="cta-button open-modal" data-modal="modal-3">
+            My Role
+          </button>
+        </article>
+
+        <!-- Modal 3 -->
+        <div id="modal-3" class="member-modal">
+          <div class="modal-content">
+            <h3 class="modal-title">Afif Ezzra</h3>
+            <p
+              class="modal-text"
+              data-en="Hello! I'm Afif,
+            As a Front-End Developer, I am responsible for building interactive and responsive website or application interfaces. By combining HTML, CSS, and JavaScript, I ensure that every visual element not only looks attractive but also works seamlessly across various devices to deliver the best user experience."
+              data-id="Halo! Aku Afif, Sebagai Front-End Developer, saya berperan dalam membangun tampilan website atau aplikasi yang interaktif dan responsif. Dengan menggabungkan HTML, CSS, dan JavaScript, saya memastikan setiap elemen visual tidak hanya terlihat menarik, tetapi juga berfungsi dengan baik di berbagai perangkat untuk memberikan pengalaman pengguna terbaik."
+            >
+              Halo! Aku Afif, Sebagai Front-End Developer, saya berperan dalam
+              membangun tampilan website atau aplikasi yang interaktif dan
+              responsif. Dengan menggabungkan HTML, CSS, dan JavaScript, saya
+              memastikan setiap elemen visual tidak hanya terlihat menarik,
+              tetapi juga berfungsi dengan baik di berbagai perangkat untuk
+              memberikan pengalaman pengguna terbaik.
+            </p>
+            <button class="cta-button close-modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- comentar -->
+
+    <section id="comentar" class="comentar">
+      <div class="layar-dalam">
+        <h3 data-en="Testimonial" data-id="Testimoni">Testimoni</h3>
+        <p
+          class="ringkasan"
+          data-en="My friends say that Jogja is an adventure paradise that combines romance and action, from the sparkling night of Malioboro to the thrilling adrenaline at Timang Beach, along with the profound warmth of its culture."
+          data-id="Teman-teman saya mengungkapkan bahwa Jogja adalah surga petualangan
+        yang memadukan romansa dan aksi, mulai dari gemerlap malam Malioboro
+        hingga adrenalin mendebarkan di pantai Timang, serta kehangatan budaya
+        yang mendalam, sungguh."
+        >
+          Teman-teman saya mengungkapkan bahwa Jogja adalah surga petualangan
+          yang memadukan romansa dan aksi, mulai dari gemerlap malam Malioboro
+          hingga adrenalin mendebarkan di pantai Timang, serta kehangatan budaya
+          yang mendalam, sungguh.
+        </p>
+      </div>
+      <div class="container mx-auto">
+        <div class="grid-container">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card" data-aos="fade-down-left">
+            <div class="flex-container">
+              <div class="icon-container">
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (1).jpeg"
+                  width="40"
+                />
+              </div>
+              <div class="fahrul">
+                <h2 class="heading">
+                  <a
+                    href="https://www.instagram.com/farullahmd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >@farullahmd</a
+                  >
+                </h2>
+                <div class="flex-inline">
+                  <div class="font">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="check-icon"> </i>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-gray"
+              data-en='"Jogja is a longing that never ends. Every corner holds a story, every step brings back memories. The sunset at Parangtritis, the night at Malioboro, a warm cup of coffee at an angkringan corner — everything feels more beautiful with you. Jogja is not just a city, but a place where the heart always wants to return.❤️✨"'
+              data-id='"Jogja itu rindu yang tak pernah habis. Setiap sudutnya menyimpan
+            cerita, setiap langkahnya membawa kenangan. Senja di Parangtritis,
+            malam di Malioboro, kopi hangat di sudut angkringan semuanya
+            terasa lebih indah jika bersamamu. Jogja bukan sekadar kota, tapi
+            tempat di mana hati selalu ingin pulang.❤️✨"'
+            >
+              "Jogja itu rindu yang tak pernah habis. Setiap sudutnya menyimpan
+              cerita, setiap langkahnya membawa kenangan. Senja di Parangtritis,
+              malam di Malioboro, kopi hangat di sudut angkringan semuanya
+              terasa lebih indah jika bersamamu. Jogja bukan sekadar kota, tapi
+              tempat di mana hati selalu ingin pulang.❤️✨"
+            </p>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card" data-aos="fade-down">
+            <div class="flex-wildan">
+              <div class="icon-container">
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (2).jpeg"
+                  width="40"
+                />
+              </div>
+              <div class="fahrul">
+                <h2 class="heading">
+                  <a
+                    href="https://www.instagram.com/willy.alwf/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @willy.alwf</a
+                  >
+                </h2>
+                <div class="flex-inline">
+                  <div class="font">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="check-icon"> </i>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-gray"
+              data-en='"Jogja is like a movie scene full of action and romance. Amid the hustle and bustle of Malioboro, love runs chasing dreams, blending with the heartbeat of the city that never sleeps. At Parangtritis, the crashing waves witness adrenaline and thrilling romance. Every corner tells an adventure where hearts take action and longing always dares to challenge time."'
+              data-id='"Jogja itu seperti adegan film penuh aksi dan asmara. Di tengah
+            riuhnya Malioboro, cinta berlari mengejar impian, menyatu dengan
+            detak kota yang energik. Di Parangtritis, deburan ombak jadi saksi
+            adrenalin dan romantisme yang mendebarkan. Setiap sudutnya
+            mengisahkan petualangan, di mana hati beraksi dan rindu selalu
+            menantang waktu."'
+            >
+              "Jogja itu seperti adegan film penuh aksi dan asmara. Di tengah
+              riuhnya Malioboro, cinta berlari mengejar impian, menyatu dengan
+              detak kota yang energik. Di Parangtritis, deburan ombak jadi saksi
+              adrenalin dan romantisme yang mendebarkan. Setiap sudutnya
+              mengisahkan petualangan, di mana hati beraksi dan rindu selalu
+              menantang waktu."
+            </p>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card" data-aos="fade-down-right">
+            <div class="flex-container">
+              <div class="icon-container">
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen 3.png"
+                  width="40"
+                />
+              </div>
+              <div class="fahrul">
+                <h2 class="heading">
+                  <a
+                    href="https://www.instagram.com/apipp.alkm/"
+                    target="_blank"
+                  >
+                    @apipp.alkm
+                  </a>
+                </h2>
+                <div class="flex-inline">
+                  <div class="font">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="check-icon"> </i>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-gray"
+              data-en='"Some say Jogja is not just a city, but a feeling that is hard to explain. Every corner brings comfort, every step holds memories. In Jogja, time seems to move slower — teaching us to appreciate the little things often forgotten."'
+              data-id='"Ada yang bilang Jogja bukan sekadar kota, tapi perasaan yang susah dijelasin. Setiap sudutnya bikin nyaman, setiap langkahnya nyimpen kenangan. Di Jogja, waktu seakan jalan lebih pelan, ngajarin kita buat menikmati hal-hal kecil yang sering terlupakan."'
+            >
+              "Ada yang bilang Jogja bukan sekadar kota, tapi perasaan yang
+              susah dijelasin. Setiap sudutnya bikin nyaman, setiap langkahnya
+              nyimpen kenangan. Di Jogja, waktu seakan jalan lebih pelan,
+              ngajarin kita buat menikmati hal-hal kecil yang sering
+              terlupakan."
+            </p>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card" data-aos="fade-up-right">
+            <div class="flex-container">
+              <div class="icon-container">
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen repunk.png"
+                  width="40"
+                />
+              </div>
+              <div class="fahrul">
+                <h2 class="heading">
+                  <a
+                    href="https://www.instagram.com/rpndarrf/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @rpndarrf</a
+                  >
+                </h2>
+                <div class="flex-inline">
+                  <div class="font">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="check-icon"> </i>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-gray"
+              data-en='"Jogja is not just a destination, but a journey of the heart. You come with curiosity, leave with longing. It makes you want to return — not only for its places, but for the comforting atmos"'
+              data-id='"Jogja itu bukan cuma destinasi, tapi perjalanan hati. Datang dengan penasaran, pulang dengan rindu. Rasanya pengen balik lagi, bukan cuma karena tempat-tempatnya, tapi juga suasananya yang bikin nyaman."'
+            >
+              "Jogja itu bukan cuma destinasi, tapi perjalanan hati. Datang
+              dengan penasaran, pulang dengan rindu. Rasanya pengen balik lagi,
+              bukan cuma karena tempat-tempatnya, tapi juga suasananya yang
+              bikin nyaman."
+            </p>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card" data-aos="fade-up">
+            <div class="flex-container">
+              <div class="icon-container">
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (5).jpeg"
+                  width="40"
+                />
+              </div>
+              <div class="fahrul">
+                <h2 class="heading">
+                  <a
+                    href="https://www.instagram.com/eghznn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >@eghznn</a
+                  >
+                </h2>
+                <div class="flex-inline">
+                  <div class="font">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="check-icon"> </i>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-gray"
+              data-en='"Jogja always has a way of making anyone feel at home, even on their first visit. Its atmosphere is warm, its people are friendly, and every corner of the city holds a story. It is not just about tourist destinations — Jogja teaches that happiness can be as simple as a cup of kopi jos at an angkringan or simply sitting and enjoying the sunset at Tugu."'
+              data-id='"Jogja selalu punya cara bikin siapa aja merasa pulang, meskipun baru pertama kali datang. Suasananya hangat, warganya ramah, dan setiap sudut kotanya selalu punya cerita. Bukan cuma tempat wisata, tapi Jogja ngajarin kalau kebahagiaan itu sesederhana kopi jos di angkringan atau sekadar duduk menikmati senja di Tugu."'
+            >
+              "Jogja selalu punya cara bikin siapa aja merasa pulang, meskipun
+              baru pertama kali datang. Suasananya hangat, warganya ramah, dan
+              setiap sudut kotanya selalu punya cerita. Bukan cuma tempat
+              wisata, tapi Jogja ngajarin kalau kebahagiaan itu sesederhana kopi
+              jos di angkringan atau sekadar duduk menikmati senja di Tugu."
+            </p>
+          </div>
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card" data-aos="fade-up-left">
+            <div class="flex-container">
+              <div class="icon-container">
+                <img
+                  alt="Photo of Jundi VG"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen 6.png"
+                  width="40"
+                />
+              </div>
+              <div class="fahrul">
+                <h2 class="heading">
+                  <a
+                    href="https://www.instagram.com/waliuddin_irfan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @waliuddin_irfan</a
+                  >
+                </h2>
+                <div class="flex-inline">
+                  <div class="font">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="check-icon"> </i>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-gray"
+              data-en='"Jogja always knows how to make you miss it. Strolling through Malioboro at night, listening to street musicians while sipping wedang ronde — the vibes are so comforting. Sunrise at Punthuk Setumbu, sunset at Parangtritis — everything feels magical. Having gudeg in the morning, then relaxing at Kopi Klotok makes you want to come back again!😍🔥"'
+              data-id='"Jogja tuh selalu punya cara buat bikin kangen. Jalan-jalan di
+            Malioboro malam hari, dengerin musisi jalanan, sambil nyeruput
+            wedang ronde vibesnya bikin nyaman. Sunrise di Punthuk Setumbu,
+            sunset di Parangtritis, semuanya magis. Makan gudeg pagi-pagi,
+            terus santai di Kopi Klotok, rasanya pengen balik lagi!😍🔥"'
+            >
+              "Jogja tuh selalu punya cara buat bikin kangen. Jalan-jalan di
+              Malioboro malam hari, dengerin musisi jalanan, sambil nyeruput
+              wedang ronde vibesnya bikin nyaman. Sunrise di Punthuk Setumbu,
+              sunset di Parangtritis, semuanya magis. Makan gudeg pagi-pagi,
+              terus santai di Kopi Klotok, rasanya pengen balik lagi!😍🔥"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <section id="footer" class="footer">
+      <h6>© 2025 Sembada Dev. All Rights Reserved.</h6>
+    </section>
+
+    <!-- Script Dst -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- buat ke html baru -->
+
+    <!-- buat nav responsif -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menuPopup");
+        if (menu.style.display === "none" || menu.style.display === "") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    </script>
+
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
